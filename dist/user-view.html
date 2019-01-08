@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
+    <title>Official Wide Wings Page</title>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <h1>
+                    <a href = "#" title="Home Page" class="header_logo">
+                        <img src="svg/logo.svg" alt="logo" height="70">
+                    </a>
+                </h1> 
+                <ul class = "navigation__container">
+                    <li class="navigation__item" id="nav-0">
+                        <button type="button" class="navigation__button">zaloguj się</button>
+                    </li>
+                    <li class="navigation__item" id="nav-1">
+                            <button type="button" class="navigation__button">załoga</button>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <div class="reservations_content">
+        <div class="user-view_container">
+            <div class="user-view_header">Twoje rezerwacje</div>
+            <div class="reservation__list">
+                <div class="reservation__element">
+                    <div class="reservation__element__header">
+                        <span>NUMER LOTU</span>         
+                        <span>Z - D0</span>         
+                        <span>DATA</span>         
+                        <span>NAZWISKO</span>         
+                    </div>
+
+                    <!-- <div class="reservation__element__content" id="1">
+                        <div class="reservation__element__content__fn">ABC1234</div>
+                        <div class="reservation__element__content__route">KRK-WAW</div>
+                        <div class="reservation__element__content__date">
+                            <strong>24-01-2019</strong>
+                            <small>19:40-20:20</small></div>
+                        <div class="reservation__element__content__name">MAJKUT</div>
+                    </div>
+
+                    <div class="reservation__element__content" id="2">
+                            <div class="reservation__element__content__fn">ABC1234</div>
+                            <div class="reservation__element__content__route">KRK-WAW</div>
+                            <div class="reservation__element__content__date">
+                                <strong>24-01-2019</strong>
+                                <small>19:40-20:20</small></div>
+                            <div class="reservation__element__content__name">MAJKUT</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="reservation-info">
+            <div class="reservation-info__date">24 sty 2019</div>
+            <div class="reservation-info__header">
+                <div class="reservation-info__destination">
+                    <strong class="reservation-info__destination__time">19:40</strong>
+                    <small class="reservation-info__destination__abbr">KRK</small>
+                </div>
+                <div class="reservation-info__duration">
+                    <span class="reservation-info__duration__time">0h 40min</span>
+                    <ul class="reservation-info__duration__route"></ul>
+                    <span class="reservation-info__duration__number">EZY2594</span>
+                </div>
+                <div class="reservation-info__origin">
+                    <strong class="reservation-info__origin__time">20:20</strong>
+                    <small class="reservation-info__origin__abbr">WAW</small>
+                </div>
+            </div>
+            <span class="reservation-info__passengers_title">PASAŻEROWIE</span>
+            <div class="reservation-info__passengers_container">
+                <!-- <div class="reservation-info__passenger" id="1">
+                    <div class="reservation-info__passenger-1stline">
+                        <div class="reservation-info__passenger-name">Wojciech Majkut</div>
+                        <span>miejsce: </span>
+                        <div class="reservation-info__passenger-seat">A3</div>
+                        <div class="reservation-info__passenger-seat-type">Economy</div>
+                    </div>
+                    <div class="reservation-info__luggage">
+                        <div class="reservation-info__luggage-el">
+                            <strong>15kg bagaż rejestrowany</strong>
+                            <small>94 zł za lot</small>
+                            <img src="svg/baggage_small.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="reservation-info__luggage-el">
+                            <strong>23kg bagaż rejestrowany</strong>
+                            <small>103 zł za lot</small>
+                            <img src="svg/baggage_medium.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="reservation-info__luggage-el">
+                            <strong>26kg bagaż rejestrowany</strong>
+                            <small>157 zł za lot</small>
+                            <img src="svg/baggage_big.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservation-info__passenger" id="2">
+                    <div class="reservation-info__passenger-1stline">
+                        <div class="reservation-info__passenger-name">Oliwiwa Krempa</div>
+                        <span>miejsce: </span>
+                        <div class="reservation-info__passenger-seat">A2</div>
+                        <div class="reservation-info__passenger-seat-type">Economy</div>
+                    </div>
+                    <div class="reservation-info__luggage">
+                        <div class="reservation-info__luggage-el">
+                            <strong>15kg bagaż rejestrowany</strong>
+                            <small>94 zł za lot</small>
+                            <img src="svg/baggage_small.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="reservation-info__luggage-el">
+                            <strong>23kg bagaż rejestrowany</strong>
+                            <small>103 zł za lot</small>
+                            <img src="svg/baggage_medium.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="reservation-info__luggage-el">
+                            <strong>26kg bagaż rejestrowany</strong>
+                            <small>157 zł za lot</small>
+                            <img src="svg/baggage_big.svg" alt="search" height="40">
+                            <div class="reservation-info__luggage-buttons">
+                                    <div class="reservation-info__luggage-count">0</div>
+                                    <button class="res-btn-increase_lugg">
+                                        <img src="svg/plus-button.svg" alt="search" height="15">
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            <div class="reservation-info__add-luggage-buttons">
+                <button class="reservation-info__remove">
+                    <span>Anuluj rezerwację</span>
+                </button>
+                <button class="reservation-info__close">
+                    <span>Zamknij</span>
+                </button>
+            </div>
+            </div>         
+        </div>
+        <div class="reservation-info__add-luggage">
+            <span>Czy chesz dodać bagaż?</br>do zapłaty: </span>
+            <div class="reservation-info__add-luggage-price">129zł</div>
+            <div class="reservation-info__add-luggage-buttons">
+                <button class="reservation-info__add-luggage-cancel">
+                    <span>Anuluj</span>
+                </button>
+                <button class="reservation-info__add-luggage-submit">
+                    <span>Kup</span>
+                </button>
+            </div>
+        </div>
+        <div class="reservation-info__delete-reservation">
+            <span>Czy chcesz anulować rezerwację? <br>zwrot: </span>
+            <div class="reservation-info__delete-reservation-price">129zł</div>
+            <div class="reservation-info__add-luggage-buttons">
+                <button class="reservation-info__delete-reservation-cancel">
+                    <span>Wroć</span>
+                </button>
+                <button class="reservation-info__delete-reservation-submit">
+                    <span>Potwierdzam</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>

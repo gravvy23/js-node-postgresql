@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
+    <title>Official Wide Wings Page</title>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <h1>
+                    <a href = "#home" title="Home Page" class="header_logo">
+                        <img src="svg/logo.svg" alt="logo" height="70">
+                    </a>
+                </h1> 
+                <ul class = "navigation__container">
+                    <li class="navigation__item" id="nav-0">
+                        <button type="button" class="navigation__button" id="nb_0">załóż konto</button>
+                    </li>
+                    <li class="navigation__item" id="nav-1">
+                        <button type="button" class="navigation__button" id="nb_1">zaloguj się</button>
+                        <button type="button" class="navigation__button" id ="nb_logout" href="#home">wyloguj się</button>
+                    </li>
+                    <li class="navigation__item" id="nav-2">
+                        <button type="button" class="navigation__button" id="nb_2">załoga</button>
+                        <button type="button" class="navigation__button" id ="nb_logout_worker" href="#home">wyloguj się</button>
+                    </li>
+                    <li class="navigation__item" id="nav-3">
+                        <button type="button" class="navigation__button" id="nb_3">Moje loty</button>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <div class = "login_panel">
+        <form name="login_form" class="login_form">
+            <span>login</span> 
+            <input type="text" size="30" name="pole1" class = "login_text" id="pole1">
+            <span>hasło</span> 
+            <input type="password" size="30" name="pole2" class = "login_text" id="pole2">
+            <input type="button" value="Zaloguj się" class="login_submit_button">
+        </form>
+    </div>
+    <div class = "login_panel_worker">
+            <form name="login_form" class="login_form">
+                <span>login</span> 
+                <input type="text" size="30" name="pole1" class = "login_text" id="pole1_worker">
+                <span>hasło</span> 
+                <input type="password" size="30" name="pole2" class = "login_text" id="pole2_worker">
+                <input type="button" value="Zaloguj się" class="login_worker_submit_button">
+            </form>
+    </div>
+    <div class = "signup_panel">
+            <form name="login_form" class="login_form">
+                <span>imię</span> 
+                <input type="text" size="30" name="pole1" class = "login_text" id="pole1_signup">
+                <span>nazwisko</span> 
+                <input type="text" size="30" name="pole1" class = "login_text" id="pole2_signup">
+                <span>data urodzenia</span> 
+                <input type="date" min="1900-01-01" max="2000-01-01" name="pole1" class = "login_text" id="pole3_signup">
+                <span>narodowość</span>
+                <select size=1 id="pole4_signup">
+                    <option value="POL">POL</option>
+                </select>
+                <span>login</span> 
+                <input type="text" size="30" name="pole2" class = "login_text" id="pole5_signup">
+                <span>hasło</span> 
+                <input type="password" size="30" name="pole2" class = "login_text" id="pole6_signup">
+                <span>Nr dokumentu (10 znaków)</span>
+                <input type="text" size="10" name="pole2" class = "login_text" id="pole7_signup">
+                <input type="button" value="Załóż konto" class="signup_submit_button">
+            </form>
+    </div>
+    <div class = "content">
+        <div class ="flight-search__panel">
+            <form name="flight-search" class="flight-search__panel__content">
+                <div class="flight-search__panel__content__select" id="0">
+                    <span>Lotnisko wylotu</span> 
+                    <input type="text" class="flight-search-origin" >
+                    </input>
+                    <button class="btn-flight-search__origin" type="button">
+                        <img src="svg/list.svg" alt="search" height="30">
+                    </button>
+                </div>
+
+                <div class="flight-search__panel__content__select" id="1">
+                    <span>Lotnisko przylotu</span> 
+                    <input type="text" class="flight-search-destination" >
+                    </input>
+                    <button class="btn-flight-search__destination" type="button">
+                        <img src="svg/list.svg" alt="search" height="30">
+                    </button>                 
+                </div>
+                <div class="flight-search__panel__toggler">
+                    <ul class="flight-search__panel__toggler__origins">
+                    </ul>
+                    <ul class="flight-search__panel__toggler__destinations">
+                    </ul>
+                </div>
+                <div class="flight-search__panel__content__select" id="2">
+                        <span>Wylot</span>
+                        <select class="flight-search-when__month" size="1">
+                            <option value="1">Styczeń</option>
+                            <option value="2">Luty</option>
+                            <option value="3">Marzec</option>
+                        </select>
+                        <select class="flight-search-when__year" size="1">
+                            <option value="2019">2019</option>
+                        </select>                    
+                </div>
+                <div class="flight-search__panel__content__person">
+                    <span>Osoby</span>
+                    <button class="btn-decrease" type="button">
+                        <img src="svg/minus-button.svg" alt="search" height="20">
+                    </button>
+                    <span class="flight-search__panel__content__person_number">1</span>
+                    <button class="btn-increase"  type="button">
+                        <img src="svg/plus-button.svg" alt="search" height="20">
+                    </button>
+                </div>
+                <button class="flight-search-submit" type="button">
+                    <span>Szukaj</span>
+                    <img src="svg/departures.svg" alt="search" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class = "search_container"></div>
+    <div class = "details_container"></div>
+    <div class = "seats_container">
+        <div class="person-list"></div>
+        <button class="person_seat__submit" style="visibility: hidden;">
+                <span>Rezerwuj</span>
+        </button>
+        <div class="seats_panel">
+            <div class = "bussiness_class">Business class +500zł</div>
+            <div class = "up_front">Up Front + 50zł</div>
+            <div class = "standard_class">Standard + 0zł</div>
+            <div class="seat" id="seat-1" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-2" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-3" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-4" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-5" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-6" data-goto="bus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-7" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-8" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-9" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-10" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-11" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-12" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-13" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-14" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-15" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-16" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-17" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-18" data-goto="plus">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-19" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-20" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-21" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-22" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-23" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-24" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-25" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-26" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-27" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-28" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-29" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-30" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-31" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-32" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-33" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-34" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-35" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-36" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-37" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-38" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-39" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="corridor"></div>
+            <div class="seat" id="seat-40" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-41" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+            <div class="seat" id="seat-42" data-goto="free">
+                    <img class="seat_icon" src="svg/seat_occupied.svg" alt="seat" height="40">
+            </div>
+        </div>
+    </div>
+    <div class="reservation_container">
+        <div class="reservation_form">
+            <div class="reservation_buttons">
+                <div class="reservation_button_sum">
+                    Do zapłaty
+                    <div class="reservation_sum">555zł</div>
+                </div>
+                <button class="reservation__submit">
+                        <span>Kupuj</span>
+                </button>
+            </div>
+            <div class='container_forms'></div>
+        </div>
+    </div>
+    <div class="reservations_content"></div>
+<script type="text/javascript" src="js/bundle.js"></script></body>

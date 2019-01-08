@@ -1,0 +1,1201 @@
+* {
+    margin: 0;
+    padding: 0; }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit; }
+
+  html {
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 62.5%; }
+    @media only screen and (max-width: 68.75em) {
+      html {
+        font-size: 50%; } }
+
+  body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)),url('../img/background-wrapper-main.jpg');
+    background-color: #4d0000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 2 * 3vw);
+  }
+
+  nav {
+    background-image:  linear-gradient(to right bottom, #990000, #4d0000);
+    position: fixed;
+    margin-top: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+    height: 80px;
+    display: flex;
+  }
+  nav > * {
+    flex: 1 100%;
+  }
+
+  h1 {
+    display: block;
+    padding: 5px;
+    margin-left: 6%;
+    width: 10%;
+  }
+  .header_logo {
+
+  }
+
+  .navigation__container{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+  }
+  .navigation__item {
+    width: 200px;
+    display: inline-flex;
+    list-style-type: none;
+    flex: 0 1 auto;
+    margin: 0 0;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    }
+  .navigation__button {
+      width: 200px;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: none;
+      -webkit-appearance: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      border: 0;
+      background: none;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 150%;}
+      .navigation__button:focus {
+        outline: none; }
+      #nb_logout, #nb_logout_worker, #nb_3{
+        visibility: hidden;
+      }
+      #nb_logout, #nb_logout_worker{
+        transform: translateX(-100px);
+      }
+      #nav-2{
+        transform: translateX(-80px);
+      }
+      #nav-3{
+        position: absolute;
+        transform: translateX(-150px);
+      }
+  .login_panel, .login_panel_worker, .signup_panel{
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: auto;
+    box-shadow: 3px 3px 103px rgba(0,0,0,1);
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    visibility: hidden;}
+  .login_form{
+    margin-left: 20px;}
+  .login_form span {
+    font-family: "Nunito Sans", sans-serif;
+    transform: translateX(5%);
+    margin-top: 20px;
+    color:#990000;
+    font-size: 160%;
+    display: block;}
+  .login_text {
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgb(169, 169, 169);
+    height: 30px;
+    padding: 1rem;}
+  .login_submit_button, .login_worker_submit_button, .signup_submit_button {
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #4d0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: all 0.2s ease 0s;
+    padding: 1rem 1rem;
+    margin: 10px;}
+
+/********************HOME PAGE*****************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+  .content {
+    top: 80px;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #655A56;
+    min-height: calc(100vh - 1vw);
+     }
+
+  .flight-search__panel {
+      margin-left: 8%;
+      box-shadow: 3px 3px 103px rgba(0,0,0,.5);
+      z-index: 20;
+      position: absolute;
+      top: 40px;
+      padding: 0 20px;
+      background: #f2f2f2;
+      border-radius: 5px;
+      width: 18%;
+      height: 70%;
+      display: inline-block;
+      min-height: 1px;
+      float: left;
+      box-sizing: border-box;
+      vertical-align: top;
+  }
+  .flight-search__panel__content__select{
+    font-family: "Nunito Sans", sans-serif;
+    transform: translateX(5%);
+    margin-top: 20px;
+    color:#990000;
+    font-weight:bold;}
+    .flight-search__panel__content__select span{
+        display: block;
+    }
+
+  .flight-search__panel__content__person{
+    font-family: "Nunito Sans", sans-serif;
+    transform: translateX(5%);
+    margin-top: 20px;
+    color:#990000;
+    font-size: 160%;}
+    .flight-search__panel__content__person_number {
+      font-weight:bold;
+    }
+
+  .flight-search__panel__toggler{
+    left: 100%;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    visibility: hidden;
+  }
+  .flight-search__panel__toggler__origins__element,
+  .flight-search__panel__toggler__destinations__element{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 180%;
+    color: #4d0000;
+  }.flight-search__panel__toggler__origins__element_name,
+  .flight-search__panel__toggler__destinations__element_name{
+    display: table-cell;
+    padding: 5px 5px;
+    vertical-align: middle;
+  }.flight-search__panel__toggler__origins__element_abrr,
+  .flight-search__panel__toggler__destinations__element_abrr{
+    padding-left: 15px;
+    color: #990000;
+    display: table-cell;
+    text-align: center;
+    padding: 8px 0;
+    vertical-align: middle;
+    position: absolute;
+    left: 80%;
+  }
+
+
+
+  .flight-search-origin, .flight-search-destination, .flight-search-when__month,.flight-search-when__year {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    font-weight: 400;
+    font-size: 150%;
+    line-height: 1.6;
+    color: rgb(101, 90, 86);
+    padding: 10px;}
+    .flight-search-origin:focus, .flight-search-destination:focus, .flight-search-when__month:focus, .flight-search-when__year:focus {
+        outline: none; }
+    .flight-search-origin, .flight-search-destination{
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(169, 169, 169);
+      width: 170px;
+    }
+
+.btn-flight-search__origin, .btn-flight-search__destination{
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  background: none;
+  transform: translateY(10px);
+  margin-left: 5%;
+}
+.btn-decrease, .btn-increase{
+  font-family: "Nunito Sans", sans-serif;
+  cursor: pointer;
+  align-items: center;
+  padding: 1rem 1rem;
+  border: none;
+  background: none;
+  transform: translateY(5px);
+  }
+  .btn-decrease:focus, .btn-increase:focus, .btn-flight-search__origin:focus, .btn-flight-search__destination:focus {
+      outline: none;
+  }
+  .btn-decrease{
+    margin-left: 25%;
+  }
+.flight-search-submit{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 200%;
+    background-color: #4d0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: all 0.2s ease 0s;
+    padding: 1rem 1rem;
+    margin: 10px;}
+    .flight-search-submit span{
+        margin-right: 80px;
+    }
+    .flight-search-submit:focus {
+        outline: none;
+    }
+
+  /********************SEARCH PAGE************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+  .search_container{
+    visibility: hidden;
+    position: absolute;
+    min-width: 100rem;
+    max-width: 100rem;
+    max-height: 60rem;
+    margin: 2px auto;
+    top: 100px;
+    left:250px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+    display: grid;
+    grid-template-rows: 8rem 8rem 8rem 8rem 8rem minmax(8rem, auto);
+    grid-template-columns: repeat(7,1fr);
+    grid-gap: 10px;
+    grid-template-areas: "day1 day2 day3 day4 day5 day6 day7"
+                         "day8 day9 day10 day11 day12 day13 day14"
+                         "day15 day16 day17 day18 day19 day20 day21"
+                         "day22 day23 day24 day25 day26 day27 day28"
+                         "day29 day30 day31 day32 day33 day34 day35"
+                         "day36 day37 day38 day39 day40 day41 day42";
+  }
+.day {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 1px;
+  background-color: #f2f2f2;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #990000;
+  border-radius: 5px;
+  cursor: pointer;
+} .day:focus {
+        outline: none;
+        border-width: 5px;
+} .day:hover {
+    border-width: 5px;
+}.invalid {
+  border-color: #a6a6a6;
+  cursor: auto;
+} .invalid:hover {
+    border-width: 2px;
+}
+
+
+.day__date {
+  width: 102%;
+  transform: translate(-1%,-3%);
+  text-align: center;
+  font-size: 150%;
+  background-color: #990000;
+  color: #ffffff;
+  font-family: "Nunito Sans", sans-serif;
+  height: 32%;
+
+}.off {
+  background-color: #a6a6a6;
+}
+
+
+.day__price {
+  transform: translateY(20%);
+  width: 100%;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 200%;
+  font-weight: bold;
+  color: #990000;
+}
+
+/********************SEARCH DETAILS************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+.content_details {
+  top: 80px;
+  position: relative;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #655A56;
+  background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)),url('../img/background-detailSearch.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2 * 3vw);}
+
+.details_container {
+  position: absolute;
+  top: 20%;
+  z-index: 20;
+  margin-left: 25%;
+  box-shadow: 0px 0px 300px 200px rgba(0,0,0,0.8);
+  padding: 0 20px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  min-height: 1px;
+  float: left;
+  box-sizing: border-box;
+  vertical-align: top;
+  visibility: hidden;}
+
+.details_container__price {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  background-color: #4d0000;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-size: 230%;
+  border-radius: 5px;}
+
+.details_container__destination, .details_container__origin {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  max-width: 10%;
+  font-size: 200%;
+  text-align: center;}
+  .details_container__origin{
+  left:70%;}
+  .details_container__destination__time, .details_container__origin__time{
+  display: block;}
+
+.details_container__duration {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  width: 38%;
+  text-align: center;
+  padding: 0 .375rem;}
+  .details_container__duration__time {
+  font-size: 140%;}
+  .details_container__duration__number {
+  font-size: 160%;}
+  .details_container__duration__route {
+  height: 2px;
+  width: 90%;
+  background-color: #817b8f;
+  margin: .375rem auto;
+  padding: 0;
+  position: relative;
+  border-radius: .375rem;
+  display: block;
+  text-align: center;
+  line-height: 0;}
+
+.details_container__persons{
+  position: absolute;
+  top:75%;
+  left: 5%;
+  font-size: 160%;
+  width: 30%;}
+  .details_container__persons__intro, .details_container__persons__price {
+    font-weight: bold;}
+  .details_container__persons__intro {
+    display: block;}
+  .details_container__persons__price {
+    margin-left: 20%;}
+
+.details_container__submit {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+  font-size: 200%;
+  background-color:#990000;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: all 0.2s ease 0s;
+  padding: 2rem 3rem;
+  margin: 10px;}
+  .details_container__submit:focus {
+    outline: none;}
+  .details_container__submit:hover {
+    padding: 3rem 4rem;}
+
+
+/**/
+/********************SEATS SELECTION***********************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+.seats_container{
+  visibility: hidden;
+  position: absolute;
+  top: 14%;
+  z-index: 20;
+  margin-left: 15%;
+  box-shadow: 3px 3px 103px rgba(0,0,0,.5);
+  padding: 0 20px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  width: 70%;
+  height: 80%;
+  display: inline-block;
+  min-height: 1px;
+  float: left;
+  box-sizing: border-box;
+  vertical-align: top;}
+
+.seats_panel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto 20px auto auto auto;
+  grid-template-rows: 20px auto 20px auto auto 20px auto auto auto auto;
+  grid-gap: 3px 6px;
+  background-color: black;
+}.seats_panel > div {
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+  color: #ffffff;
+}.bussiness_class {
+  grid-column: 1 / span 7;
+}.up_front {
+  grid-area: 3 / 1 / span 1 / span 7;
+}.standard_class {
+  grid-area: 6 / 1 / span 1 /span 7;
+}
+
+.seat_icon {
+  cursor: pointer;
+}
+
+.person_seat {
+  margin-top: 1%;
+  margin-left:1%;
+  font-size: 140%;
+  color:black;
+  display: flex;
+}.person_seat_selected {
+  margin-left:5%;
+  font-weight: bold;
+  width: 10%;
+}.person_seat_price {
+  transform: translateY(-20%);
+  font-weight: bold;
+  color: #990000;
+  font-size: 160%;}
+
+  .person_seat__submit {
+    position: absolute;
+    bottom: 4%;
+    left: 2%;
+    font-size: 200%;
+    background-color:#990000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: all 0.2s ease 0s;
+    padding: 2rem 3rem;
+    margin: 10px;}
+    .person_seat__submit:focus {
+      outline: none;}
+
+
+/*  */
+/********************RESERVATION VIEW**********************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/*replace this container with body in the future!*/
+.reservation_container {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: auto;
+  visibility: hidden;}
+.reservation_form {
+  display: block;
+  width: 50%;
+  margin: 0% auto;
+  margin-top: 2%;
+  border: #655A56;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+  background-color: #f2f2f2;
+}.reservation_buttons {
+  display: inline-flex;
+  width: 100%;
+
+}.reservation_button_sum {
+  width: 35%;
+  display: flex;
+  left: 20%;
+  margin: 10px;
+  background-color: #990000;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  color: #ffffff;
+  font-size: 150%;
+}.reservation_sum {
+  margin-left: 30px;
+  font-size: 160%;
+}.reservation__submit {
+  width: 25%;
+  font-size: 200%;
+  margin: 10px;
+  background-color:#990000;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: all 0.2s ease 0s;
+  padding: 1rem 1rem;
+  }.person_seat__submit:focus {
+  outline: none;
+  }.person_form {
+  display: block;
+  width: 70%;
+  margin: 8% auto;
+  border: #655A56;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 120%;
+  color: #655A56;
+} .person_form span {
+  position: absolute;
+  transform: translateY(-20px);
+  color: #4d0000;
+  font-size: 140%;
+  font-weight: bold;}
+  .person_form small {
+    display: inline-flex;
+    font-size: 120%;
+    margin: 10px 0 0 5px;
+    width: 45%;
+  } .person_name,
+    .person_surname,
+    .person_bday,
+    .person_nationality {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    font-weight: 400;
+    font-size: 120%;
+    line-height: 1.6;
+    margin: 5px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(169, 169, 169);
+    width: 45%;}
+    .person_name:focus, .person_surname:focus {
+      outline: none; }
+    .person_nationality {
+      width: 20%;}
+
+  .person-luggage {
+    margin-top:15px;}
+  .person-luggage__el {
+    display:inline-flex;
+    flex-direction: column;
+    width: 31%;
+  text-align: center;}
+    .person-luggage__el strong {
+      width: 50%;
+      margin: 2% auto;}
+    .person-luggage__el small {
+      width: 50%;
+      margin: 2% auto;}
+    .person-luggage__el img {
+      width: 50%;
+      margin: 2% auto;}
+
+  .person-luggage__buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }.person-luggage__count{
+    font-size: 120%;
+    color: black;
+  }.btn-decrease_lugg, .btn-increase_lugg{
+    cursor: pointer;
+    align-items: center;
+    border: none;
+    background: none;
+  }.btn-decrease_lugg:focus, .btn-increase_lugg:focus {
+      outline: none;}
+
+/********************USER VIEW****************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+.reservations_content {
+  visibility: hidden;
+  }.user-view_container{
+    margin-left: 8%;
+    box-shadow: 3px 3px 103px rgba(0,0,0,.5);
+    z-index: 20;
+    position: absolute;
+    top: 100px;
+    background: #f2f2f2;
+    border-radius: 5px;
+    width: 84%;
+    height: auto;
+  }.user-view_header{
+    background-color: #4d0000;
+    padding: 1rem;
+    text-align: center;
+    font-size: 200%;
+    color: #ffffff;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }.reservation__list {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #a6a6a6;
+    border-radius: 5px;
+    margin: 2% auto;
+    width: 90%;
+  }.reservation__element{
+  }.reservation__element__header{
+    width: 100%;
+    background-color: #a6a6a6;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #ffffff;
+    font-size: 120%;
+    display: flex;
+  }.reservation__element__header span {
+    width: 25%;
+    text-align: center;
+  }.reservation__element__content {
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    border-top-style: solid;
+    border-color: #a6a6a6;
+  }.reservation__element__content__fn,
+   .reservation__element__content__route,
+   .reservation__element__content__date,
+   .reservation__element__content__name{
+    width: 25%;
+    font-size: 140%;
+    padding: 1rem;
+    margin: auto;
+  }.reservation__element__content__date strong{
+    display: block;}
+
+  .reservation-info{
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: auto;
+    box-shadow: 3px 3px 103px rgba(0,0,0,1);
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    visibility: hidden;
+  }.reservation-info__date{
+    padding: 0.5rem;
+    background-color: #4d0000;
+    color: #ffffff;
+    font-size: 160%;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;}
+  
+  .reservation-info__header {
+    display: flex;
+    margin: 0% 20%;
+  }.reservation-info__destination, .reservation-info__origin {
+    margin: 20px;
+    max-width: 10%;
+    font-size: 200%;
+    text-align: center;}
+    .reservation-info__origin{
+    left:70%;}
+    .reservation-info__destination__time, .reservation-info__origin__time{
+    display: block;
+  }.reservation-info__duration {
+    margin: 20px;
+    width: 38%;
+    text-align: center;
+    padding: 0 .375rem;}
+    .reservation-info__duration__time {
+    font-size: 140%;}
+    .reservation-info__duration__number {
+    font-size: 160%;}
+    .reservation-info__duration__route {
+    height: 2px;
+    width: 90%;
+    background-color: #817b8f;
+    margin: .375rem auto;
+    padding: 0;
+    position: relative;
+    border-radius: .375rem;
+    display: block;
+    text-align: center;
+    line-height: 0;}
+
+  .reservation-info__passenger span,
+  .reservation-info__passenger-seat-type{
+    font-size: 160%;
+    margin-right: 20px;
+  }.reservation-info__passengers_title {
+    font-size: 160%;
+    color: #990000;
+    font-weight: bold;
+    margin: 10px;}
+  .reservation-info__passenger-1stline{
+    display: flex;
+  }.reservation-info__passengers_container {
+    margin: 10px;
+  }.reservation-info__passenger-name,
+   .reservation-info__passenger-seat{
+    width: 30px;
+    font-size: 170%;
+    font-weight: bold;
+  }.reservation-info__passenger-name {
+    width: 200px;
+    margin-left:10px;
+  }
+
+  .reservation-info__luggage {
+    margin: 10px auto;
+  }.reservation-info__luggage-el {
+    display:inline-flex;
+    flex-direction: column;
+    width: 31%;
+    text-align: center;
+  }.reservation-info__luggage-el strong {
+    width: 50%;
+    margin: 2% auto;
+  }.reservation-info__luggage-el small {
+    width: 50%;
+    margin: 2% auto;
+  }.reservation-info__luggage-el img {
+    width: auto;
+    margin: 2% auto;
+    padding-left: 10px;}
+
+  .reservation-info__luggage-buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 2% auto;
+  }.reservation-info__luggage-count{
+    font-size: 120%;
+    color: black;
+  }.res-btn-increase_lugg{
+    cursor: pointer;
+    align-items: center;
+    border: none;
+    background: none;
+  }.res-btn-increase_lugg:focus {
+    outline: none;}
+
+    /*potwierdzenie zakupu bagazu*/
+    .reservation-info__add-luggage{
+      position: fixed;
+      z-index: 300;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30%;
+      height: auto;
+      box-shadow: 3px 3px 103px rgba(0,0,0,1);
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 160%;
+      padding: 1rem;
+      visibility: hidden;
+    }.reservation-info__add-luggage-price {
+      font-weight: bold;
+    }.reservation-info__add-luggage-buttons {
+
+    }.reservation-info__add-luggage-buttons button {
+        font-size: 120%;
+        background-color:#990000;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        align-items: center;
+        border-radius: 5px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        transition: all 0.2s ease 0s;
+        padding: 0.5rem 0.5rem;
+        min-width: 80px;
+        margin: 10px 50px 10px 50px;
+        }
+        .reservation-info__add-luggage-buttons button:focus {
+          outline: none;}
+    
+      /*usunięcie rezerwacji*/
+      .reservation-info__delete-reservation{
+        position: fixed;
+        z-index: 300;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: auto;
+        box-shadow: 3px 3px 103px rgba(0,0,0,1);
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 160%;
+        padding: 1rem;
+        visibility: hidden;
+      }.reservation-info__delete-reservation-price {
+        font-weight: bold;}
+      
+.reservation-info__close{
+  margin-left: 240px !important;
+}
+
+/********************STAFF VIEW****************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+/**********************************************************/
+.staff-view_container{
+  margin-left: 8%;
+  box-shadow: 3px 3px 103px rgba(0,0,0,.5);
+  z-index: 20;
+  position: absolute;
+  top: 100px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  width: 84%;
+  height: auto;
+}.staff-view_header{
+  background-color: #4d0000;
+  padding: 1rem;
+  font-size: 160%;
+  color: #ffffff;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}.staff-view_header span#header-title{
+  font-size: 150%;
+  margin: 0px 44%;
+}.staff-view_header-name,
+ .staff-view_header-surname, 
+ .staff-view_header-position {
+  display: flex;
+}.staff-view_header-name span,
+ .staff-view_header-surname span, 
+ .staff-view_header-position span {
+  width: 100px;
+}.staff-view_header-name_field,
+ .staff-view_header-position_field,
+ .staff-view_header-surname_field{
+  margin-left: 40px;
+  font-weight: bold;}
+
+.staff-view__list {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #a6a6a6;
+  border-radius: 5px;
+  margin: 2% auto;
+  width: 90%;
+}.staff-view__element{
+}.staff-view__element__header{
+  width: 100%;
+  background-color: #a6a6a6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #ffffff;
+  font-size: 120%;
+  display: flex;
+}.staff-view__element__header span {
+  width: 25%;
+  text-align: center;
+}.staff-view__element__content {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  border-top-style: solid;
+  border-color: #a6a6a6;
+}.staff-view__element__content__fn,
+ .staff-view__element__content__route,
+ .staff-view__element__content__distance,
+ .staff-view__element__content__type,
+ .staff-view__element__content__time,
+ .staff-view__element__content__date{
+  width: 16.6%;
+  font-size: 140%;
+  padding: 1rem;
+  margin: auto;}
+
+/*********Okno z informacją o danym locie*****/
+.flight-info{
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+  box-shadow: 3px 3px 103px rgba(0,0,0,1);
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  visibility: hidden;
+}.flight-info__date{
+  padding: 0.5rem;
+  background-color: #4d0000;
+  color: #ffffff;
+  font-size: 160%;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}.flight-info__header {
+  display: flex;
+  margin: 0% 20%;
+}.flight-info__destination, 
+ .flight-info__origin {
+  margin: 20px;
+  max-width: 10%;
+  font-size: 200%;
+  text-align: center;
+}.flight-info__origin{
+  left:70%;}
+  .flight-info__destination__time,
+  .flight-info__origin__time{
+  display: block;
+}.flight-info__duration {
+  margin: 20px;
+  width: 38%;
+  text-align: center;
+  padding: 0 .375rem;}
+.flight-info__duration__time {
+  font-size: 140%;}
+.flight-info__duration__number {
+  font-size: 160%;}
+.flight-info__duration__route {
+  height: 2px;
+  width: 90%;
+  background-color: #817b8f;
+  margin: .375rem auto;
+  padding: 0;
+  position: relative;
+  border-radius: .375rem;
+  display: block;
+  text-align: center;
+  line-height: 0;}
+
+.flight-info__airports {
+  display: flex;
+}.flight-info__airports-origin,
+ .flight-info__airports-destination,
+ .flight-info__plane {
+  font-size: 140%;
+  padding: 1rem;
+  width: 50%;
+  font-weight: 800;
+}.flight-info__airports-origin span,
+ .flight-info__airports-destination span,
+ .flight-info__plane span{
+  display: inline-flex;
+  width:25%;
+  font-weight: 100;
+}.flight-info__airports-origin strong,
+ .flight-info__airports-destination strong,
+ .flight-info__plane strong{
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #4d0000;
+  color: #ffffff;
+}.flight-info__plane{
+  width: 100%;}
+
+.flight-info__buttons {
+  display: flex;
+}.flight-info__buttons button {
+  font-size: 140%;
+  background-color:#990000;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: all 0.2s ease 0s;
+  padding:1rem 2rem;
+  min-width: 80px;
+  margin: 10px auto;
+  }.flight-info__buttons button:focus {
+  outline: none;}
+
+  /********Okno z lista załgi**********/
+.crew-info{
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  box-shadow: 3px 3px 103px rgba(0,0,0,1);
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  visibility: hidden;
+}.crew-info__header{
+  padding: 0.5rem;
+  background-color: #4d0000;
+  color: #ffffff;
+  font-size: 160%;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}.crew-info__list {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #a6a6a6;
+  border-radius: 5px;
+  margin: 2% auto;
+  width: 90%;
+}.crew-info__list__header{
+  background-color: #a6a6a6;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #ffffff;
+  font-size: 120%;
+  display: flex;
+}.crew-info__list__header span {
+  width: 33%;
+  text-align: center;
+}.crew-info__list__element {
+  width: 100%;
+  font-size: 140%;
+  font-weight: 800;
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-color: #a6a6a6;
+}.crew-info__list__element span{
+  width: 33%;
+  padding-left: 10px;
+  border-left-color: #a6a6a6;
+  border-left-style: solid;
+  border-left-width: 2px;
+}.crew-info__buttons {
+  display: flex;
+}.crew-info__buttons button {
+  font-size: 140%;
+  background-color:#990000;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: all 0.2s ease 0s;
+  padding:1rem 2rem;
+  min-width: 80px;
+  margin: 10px auto;
+  }.crew-info__buttons button:focus {
+  outline: none;}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> -->
+    <title>Official Wide Wings Page</title>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <h1>
+                    <a href = "#" title="Home Page" class="header_logo">
+                        <img src="svg/logo.svg" alt="logo" height="70">
+                    </a>
+                </h1> 
+                <ul class = "navigation__container">
+                    <li class="navigation__item" id="nav-0">
+                        <button type="button" class="navigation__button">zaloguj się</button>
+                    </li>
+                    <li class="navigation__item" id="nav-1">
+                            <button type="button" class="navigation__button">załoga</button>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <div class="reservations_content">
+       <div class="staff-view_container">
+            <div class="staff-view_header">
+                <div class="staff-view_header-name">
+                    <span>Imię:</span>
+                    <div class="staff-view_header-name_field">John</div>
+                </div>
+                <div class="staff-view_header-surname">
+                    <span>Nazwisko:</span>
+                    <div class="staff-view_header-name_field">Kowalski</div>
+                </div>
+                <div class="staff-view_header-position">
+                    <span>Stanowisko:</span>
+                    <div class="staff-view_header-position_field">Pierwszy kapitan</div>
+                </div>
+                <span id="header-title">Twoje Rejsy</span>
+            </div>
+            <div class="staff-view__list">
+                    <div class="staff-view__element">
+                        <div class="staff-view__element__header">
+                            <span>NUMER LOTU</span>         
+                            <span>Z - D0</span>
+                            <span>ODLEGŁOŚĆ [KM]</span>
+                            <span>TYP SAMOLOTU</span>
+                            <span>GODZINA</span>       
+                            <span>DATA</span>         
+                        </div>
+                        <!-- <div class="staff-view__element__content" id="1">
+                            <div class="staff-view__element__content__fn">ABC1234</div>
+                            <div class="staff-view__element__content__route">KRK-WAW</div>
+                            <div class="staff-view__element__content__distance">400</div>
+                            <div class="staff-view__element__content__type">AIRBUS A380</div>
+                            <div class="staff-view__element__content__time">19:40</div>
+                            <div class="staff-view__element__content__date">24-01-2019</div>
+                        </div>
+                        <div class="staff-view__element__content" id="2">
+                            <div class="staff-view__element__content__fn">ABC1234</div>
+                            <div class="staff-view__element__content__route">WAW-JFK</div>
+                            <div class="staff-view__element__content__distance">12000</div>
+                            <div class="staff-view__element__content__type">AIRBUS A380</div>
+                            <div class="staff-view__element__content__time">9:40</div>
+                            <div class="staff-view__element__content__date">25-01-2019</div>
+                        </div> -->
+                    </div>
+            </div>
+       </div>
+       <div class = "flight-info">
+            <div class="flight-info__date">24 sty 2019</div>
+            <div class="flight-info__header">
+                <div class="flight-info__destination">
+                    <strong class="flight-info__destination__time">19:40</strong>
+                    <small class="flight-info__destination__abbr">KRK</small>
+                </div>
+                <div class="flight-info__duration">
+                    <span class="flight-info__duration__time">0h 40min</span>
+                    <ul class="flight-info__duration__route"></ul>
+                    <span class="flight-info__duration__number">EZY2594</span>
+                </div>
+                <div class="flight-info__origin">
+                    <strong class="flight-info__origin__time">20:20</strong>
+                    <small class="flight-info__origin__abbr">WAW</small>
+                </div>
+            </div>
+            <div class="flight-info__airports">
+                <div class="flight-info__airports-origin">
+                    <strong>Lotnisko startowe</strong>
+                    <span>Kraj: </span>Polska</br>
+                    <span>Miasto: </span>Kraków</br>
+                    <span>UTC: </span>+1</br>
+                    <span>X: </span>51.200</br>
+                    <span>Y: </span>22.320</br>
+                </div>
+                <div class="flight-info__airports-destination">
+                    <strong>Lotnisko docelowe</strong>
+                    <span>Kraj: </span>Polska</br>
+                    <span>Miasto: </span>Warszawa</br>
+                    <span>UTC: </span>+1</br>
+                    <span>X: </span>52.100</br>
+                    <span>Y: </span>22.450</br>
+                </div>
+            </div>
+            <div class="flight-info__plane">
+                <strong>Samolot</strong>
+                <span>Producent: </span>Airbus</br>
+                <span>Model: </span>A380</br>
+                <span>Rok produkcji: </span>2007</br>
+                <span>Liczba załogi: </span>16</br>
+                <span>Liczba pasażerów: </span>560</br>
+            </div>
+            <div class="flight-info__buttons">
+                <button class="flight-info__crew">
+                    <span>Lista załogi</span>
+                </button>
+                <button class="flight-info__close">
+                    <span>Zamknij</span>
+                </button>
+            </div>
+       </div>
+       <div class = "crew-info">
+           <div class="crew-info__header">
+                Lista załogi tego lotu
+           </div>
+           <div class = "crew-info__list">
+                <div class="crew-info__list__header">
+                    <span>IMIĘ</span>         
+                    <span>NAZWISKO</span>
+                    <span>FUNKCJA</span>
+                </div>
+                <!-- <div class="crew-info__list__element" id="1">
+                    <span>John</span>
+                    <span>Kowalski</span>
+                    <span>Pierwszy kapitan</span>
+                </div>
+                <div class="crew-info__list__element" id="2">
+                        <span>Aiko</span>
+                        <span>Kurosawa</span>
+                        <span>Drugi kapitan</span>
+                </div>
+                <div class="crew-info__list__element" id="3">
+                        <span>Joey</span>
+                        <span>Shmitt</span>
+                        <span>Steward</span>
+                </div>
+                <div class="crew-info__list__element" id="4">
+                        <span>Nadia</span>
+                        <span>Pietrushkina</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="5">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="6">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="7">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="8">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="9">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="10">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="11">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="12">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="13">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="14">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="15">
+                        <span>Mia</span>
+                        <span>Wasilkowski</span>
+                        <span>Stewardessa</span>
+                </div>
+                <div class="crew-info__list__element" id="16">
+                        <span>Amy</span>
+                        <span>Butterclams</span>
+                        <span>Stewardessa</span>
+                </div> -->
+           </div>
+           <div class="crew-info__buttons">
+                <button class="crew-info__close">
+                        <span>Zamknij</span>
+                </button>
+           </div>
+       </div>
+    </div>
+</body>
